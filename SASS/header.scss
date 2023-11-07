@@ -1,0 +1,22 @@
+@mixin dflexgeneral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  @include dflexgeneral();
+  flex-direction: column;
+  border-color: var(--background-color);
+
+  .logo {
+    @include dflexgeneral();
+    background: var(--white);
+    padding: 14px 89px 13px 89px;
+  }
+
+  img {
+    width: 197px;
+    height: 36px;
+  }
+}

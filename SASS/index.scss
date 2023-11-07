@@ -5,41 +5,25 @@
 
 :root {
   --background-color: #f6f6f6;
-  --button-gradient: linear-gradient(#9356dc, #ff79da);
+  --button-background: linear-gradient(to top, #9356dc, #ff79da);
   --nouveau: #99e2d0;
   --nouveau-font: #008766;
   --grey: #353535;
+  --grey-2: #eaeaea;
+  --white: #fff;
 }
 
 body {
   margin: 0;
-
   border-color: var(--background-color);
 }
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  .logo {
-    display: flex;
-    background: var(--background-color);
-    justify-content: center;
-    width: 100%;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  }
+@import "header.scss";
 
-  img {
-    width: 197px;
-    height: 36px;
-  }
-}
 .location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include dflexgeneral();
   width: 100%;
-  background-color: #eaeaea;
+  background-color: var(--grey-2);
   height: 50px;
   gap: 17px;
 
@@ -50,13 +34,17 @@ header {
   }
 
   .p-loc {
+    color: var(--grey);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
   }
 }
-
+main {
+  display: flex;
+  flex-direction: column;
+}
 .info {
   width: 100%;
   text-align: center;
@@ -65,9 +53,48 @@ header {
 
   h1 {
     font-size: 1.5rem;
+    padding: 0 58px 10px 42px;
   }
   p {
     font-weight: 300;
-    margin: 20px;
+    padding: 0 34px 27px 26px;
+  }
+
+  .cta {
+    background: var(--button-background);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+    h3 {
+      color: var(--white);
+      margin: 13px 18.75px;
+    }
+  }
+}
+
+.fonctionnement {
+  @include dflexgeneral();
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 30px;
+  align-items: flex-start;
+
+  .f-box-contener {
+    @include dflexgeneral();
+    flex-direction: column;
+    gap: 15px;
+    .f-box {
+      @include dflexgeneral();
+      gap: 10px;
+      background-color: var(--background-color);
+    }
+    h4 {
+      position: relative;
+      right: 8px;
+      background-color: #9356dc;
+      padding: 0 4.5px;
+      border-radius: 100%;
+    }
   }
 }
