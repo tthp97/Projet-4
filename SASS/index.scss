@@ -16,9 +16,21 @@
 body {
   margin: 0;
   border-color: var(--background-color);
+  max-width: 100%;
 }
 
 @import "header.scss";
+@import "footer.scss";
+@mixin dfcolomun {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  a {
+    display: none;
+  }
+}
 
 .location {
   @include dflexgeneral();
@@ -76,25 +88,71 @@ main {
 .fonctionnement {
   @include dflexgeneral();
   flex-direction: column;
-  margin-top: 30px;
-  gap: 30px;
+  margin-top: 48px;
+  margin-bottom: 68px;
+  gap: 24.92px;
   align-items: flex-start;
+  h2 {
+    padding-left: 20px;
+  }
 
-  .f-box-contener {
+  .f-box {
     @include dflexgeneral();
-    flex-direction: column;
-    gap: 15px;
-    .f-box {
-      @include dflexgeneral();
-      gap: 10px;
-      background-color: var(--background-color);
+    justify-content: normal;
+    gap: 10px;
+    background-color: var(--background-color);
+    width: -webkit-fill-available;
+    margin: 0 20px 0 32.51px;
+    height: 72.379px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  h3 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  h4 {
+    position: relative;
+    right: 10px;
+    color: var(--grey-2);
+    font-size: small;
+    background-color: #9356dc;
+    padding: 0 4.5px;
+    border-radius: 100%;
+  }
+}
+
+.restaurants {
+  background-color: var(--background-color);
+  .card-contener {
+    @include dfcolomun();
+    row-gap: 10px;
+  }
+  .card {
+    @include dfcolomun();
+    margin: 0 17px 0 18px;
+    height: 100%;
+    box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
     }
-    h4 {
-      position: relative;
-      right: 8px;
-      background-color: #9356dc;
-      padding: 0 4.5px;
-      border-radius: 100%;
+    .card-content {
+      @include dflexgeneral;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 16px 25px 12px 13px;
+    }
+    .card-txt {
+      @include dfcolomun();
+      row-gap: 5px;
     }
   }
 }

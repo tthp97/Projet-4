@@ -12,11 +12,17 @@ header {
   .logo {
     @include dflexgeneral();
     background: var(--white);
-    padding: 14px 89px 13px 89px;
-  }
+    margin: 14px 89px 13px 89px;
+    width: 100%;
+    a {
+      position: absolute;
+      left: 3%;
+      margin-right: 42px;
+    }
 
-  img {
-    width: 197px;
-    height: 36px;
+    img {
+      width: 197px;
+      height: 36px;
+    }
   }
 }
