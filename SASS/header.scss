@@ -8,6 +8,8 @@ header {
   @include dflexgeneral();
   flex-direction: column;
   border-color: var(--background-color);
+  box-shadow: 5px 0px 20px #a7a7a7;
+  position: relative;
 
   .logo {
     @include dflexgeneral();

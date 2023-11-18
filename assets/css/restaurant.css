@@ -1,0 +1,88 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-color: var(--background-color);
+  box-shadow: 5px 0px 20px #a7a7a7;
+  position: relative;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  margin: 14px 89px 13px 89px;
+  width: 100%;
+}
+header .logo a {
+  position: absolute;
+  left: 3%;
+  margin-right: 42px;
+}
+header .logo img {
+  width: 197px;
+  height: 36px;
+}
+
+footer {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #353535;
+  padding: 25px 22px;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer .text-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.footer .text-footer h5 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.footer .text-footer .fa-solid {
+  color: #fff;
+}
+
+:root {
+  --background-color: #f6f6f6;
+  --button-background: linear-gradient(to top, #9356dc, #ff79da);
+  --nouveau: #99e2d0;
+  --nouveau-font: #008766;
+  --grey: #353535;
+  --grey-2: #eaeaea;
+  --white: #fff;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0;
+  border-color: var(--background-color);
+}
+
+header a {
+  display: block;
+}
+
+/*# sourceMappingURL=restaurant.css.map */

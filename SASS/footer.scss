@@ -1,6 +1,36 @@
 footer {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   background: #353535;
-  path {
-    fill: red;
+  padding: 25px 22px;
+
+  h2 {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  .text-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    h5 {
+      color: #fff;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .fa-solid {
+      color: #fff;
+    }
   }
 }

@@ -1,0 +1,279 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-color: var(--background-color);
+  box-shadow: 5px 0px 20px #a7a7a7;
+  position: relative;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  margin: 14px 89px 13px 89px;
+  width: 100%;
+}
+header .logo a {
+  position: absolute;
+  left: 3%;
+  margin-right: 42px;
+}
+header .logo img {
+  width: 197px;
+  height: 36px;
+}
+
+footer {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #353535;
+  padding: 25px 22px;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer .text-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.footer .text-footer h5 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.footer .text-footer .fa-solid {
+  color: #fff;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  --background-color: #f6f6f6;
+  --button-background: linear-gradient(to top, #9356dc, #ff79da);
+  --nouveau: #99e2d0;
+  --nouveau-font: #008766;
+  --grey: #353535;
+  --grey-2: #eaeaea;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  border-color: var(--background-color);
+}
+
+header a {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--grey-2);
+  height: 50px;
+  gap: 17px;
+}
+.location svg {
+  color: var(--grey);
+  width: 12px;
+  height: 16px;
+}
+.location .p-loc {
+  color: var(--grey);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.info {
+  width: 100%;
+  text-align: center;
+  background-color: var(--background-color);
+  padding: 50px 0;
+}
+.info h1 {
+  font-size: 1.5rem;
+  padding: 0 58px 10px 42px;
+}
+.info p {
+  font-weight: 300;
+  padding: 0 34px 27px 26px;
+}
+.info .cta {
+  background: var(--button-background);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s;
+}
+.info .cta:hover {
+  transform: scale(1.15);
+}
+.info .cta h3 {
+  color: var(--white);
+  margin: 13px 18.75px;
+}
+
+.fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 48px;
+  margin-bottom: 68px;
+  gap: 24.92px;
+  align-items: flex-start;
+}
+.fonctionnement h2 {
+  padding-left: 20px;
+}
+.fonctionnement .f-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: normal;
+  gap: 10px;
+  background-color: var(--background-color);
+  width: -webkit-fill-available;
+  margin: 0 20px 0 32.51px;
+  height: 72.379px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s;
+}
+.fonctionnement .f-box:hover {
+  transform: scale(1.01);
+  background: rgba(191, 171, 216, 0.7176470588);
+}
+.fonctionnement h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.fonctionnement h4 {
+  position: relative;
+  right: 10px;
+  color: var(--grey-2);
+  font-size: small;
+  background-color: #9356dc;
+  padding: 0 4.5px;
+  border-radius: 100%;
+}
+
+.restaurants {
+  background-color: var(--background-color);
+  padding-bottom: 66px;
+}
+.restaurants h2 {
+  margin: 54px 0 20px 0;
+}
+.restaurants .card-contener {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  row-gap: 18px;
+}
+.restaurants .card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 17px 0 18px;
+  height: 100%;
+  box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+.restaurants .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants .card .card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 16px 25px 12px 13px;
+}
+.restaurants .card .card-txt {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.restaurants .card:hover {
+  transform: scale(1.01);
+  opacity: 0.75;
+}
+
+.new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 40;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+.card-icons i {
+  font-size: 25px;
+}
+.card-icons input[type=checkbox] {
+  display: none;
+}
+.card-icons input[type=checkbox]:checked ~ .disliked {
+  display: none;
+}
+.card-icons input[type=checkbox]:checked ~ .liked {
+  display: inline-block;
+}
+.card-icons .fa-solid.liked {
+  display: none;
+  background: var(--button-background);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+i:hover {
+  transition: all 0.5s;
+}
+i:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=index.css.map */
