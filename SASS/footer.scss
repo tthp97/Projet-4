@@ -38,5 +38,9 @@ footer {
 @media only screen and (min-width: 1024px) {
   footer {
     flex-direction: row-reverse;
+    align-items: center;
+    .footer {
+      flex-direction: row;
+    }
   }
 }

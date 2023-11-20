@@ -1,5 +1,7 @@
 @import "header.scss";
 @import "footer.scss";
+@import "cta.scss";
+@import "coeur.scss";
 
 * {
   font-family: "Roboto", sans-serif;
@@ -73,21 +75,6 @@ main {
   p {
     font-weight: 300;
     padding: 0 34px 27px 26px;
-  }
-
-  .cta {
-    background: var(--button-background);
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s;
-    color: var(--white);
-    padding: 13px 18.75px;
-
-    &:hover {
-      transform: scale(1.15);
-      opacity: 0.5;
-    }
   }
 }
 
@@ -201,46 +188,9 @@ main {
   height: 29px;
   border-radius: 2px;
 }
-.card-icons {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1rem;
-  & i {
-    font-size: 25px;
-  }
-  input[type="checkbox"] {
-    display: none;
-
-    &:checked ~ .disliked {
-      display: none;
-    }
-    &:checked ~ .liked {
-      display: inline-block;
-    }
-  }
-
-  .fa-solid.liked {
-    display: none;
-    background: var(--button-background);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-i:hover {
-  transition: all 0.5s;
-  & {
-    transform: scale(1.1);
-    opacity: 0.5;
-  }
-}
 
 //desktop
 @media only screen and (min-width: 1024px) {
-  header .logo {
-    margin: 30px 0px 31.798px 0px;
-  }
-
   .info {
     padding: 30px 0;
     h1 {
@@ -260,13 +210,13 @@ i:hover {
   }
 
   .restaurants {
-    margin-bottom: 30px;
     padding: 0 12.5%;
     .card-contener {
       display: grid;
       grid-template-columns: 1fr 1fr;
       row-gap: 50px;
       column-gap: 100px;
+      padding-bottom: 30px;
     }
     .card {
       margin: 0;

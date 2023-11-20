@@ -1,5 +1,6 @@
 @import "header.scss";
 @import "footer.scss";
+@import "coeur.scss";
 
 :root {
   --background-color: #f6f6f6;
@@ -22,7 +23,102 @@ body {
 }
 
 header {
+  box-shadow: none;
   a {
     display: block;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    padding-top: 40px;
+    padding-left: 17px;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 28px;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    h2 {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    .underline {
+      background: var(--nouveau);
+      width: 40px;
+      height: 3px;
+      display: block;
+    }
+  }
+}
+
+.lpdg {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  img {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+.lpdg-container {
+  border-radius: 15px 15px 0 0;
+  background-color: var(--background-color);
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 220px;
+  z-index: 1;
+  .en-tete {
+    .card-icons {
+      bottom: 0;
+      top: 3rem;
+      right: 1.438rem;
+      height: 25px;
+    }
+  }
+  .little-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+.lc-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .lc-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  span {
+    font-weight: 700;
   }
 }
