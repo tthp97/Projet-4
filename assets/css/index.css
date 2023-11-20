@@ -59,6 +59,11 @@ footer h2 {
   color: #fff;
 }
 
+@media only screen and (min-width: 1024px) {
+  footer {
+    flex-direction: row-reverse;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -116,7 +121,7 @@ main {
   width: 100%;
   text-align: center;
   background-color: var(--background-color);
-  padding: 50px 0;
+  padding: 39px 0;
 }
 .info h1 {
   font-size: 1.5rem;
@@ -131,14 +136,13 @@ main {
   border: none;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s;
+  transition: all 0.3s;
+  color: var(--white);
+  padding: 13px 18.75px;
 }
 .info .cta:hover {
   transform: scale(1.15);
-}
-.info .cta h3 {
-  color: var(--white);
-  margin: 13px 18.75px;
+  opacity: 0.5;
 }
 
 .fonctionnement {
@@ -149,12 +153,19 @@ main {
   margin-top: 48px;
   margin-bottom: 68px;
   gap: 24.92px;
-  align-items: flex-start;
+  align-items: stretch;
 }
-.fonctionnement h2 {
+.fonctionnement .f-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24.94px;
+}
+.fonctionnement .f-container h2 {
   padding-left: 20px;
 }
-.fonctionnement .f-box {
+.fonctionnement .f-container .f-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,17 +179,17 @@ main {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   transition: transform 0.5s;
 }
-.fonctionnement .f-box:hover {
+.fonctionnement .f-container .f-box:hover {
   transform: scale(1.01);
   background: rgba(191, 171, 216, 0.7176470588);
 }
-.fonctionnement h3 {
+.fonctionnement .f-container h3 {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
-.fonctionnement h4 {
+.fonctionnement .f-container h4 {
   position: relative;
   right: 10px;
   color: var(--grey-2);
@@ -198,12 +209,12 @@ main {
 .restaurants .card-contener {
   display: flex;
   flex-direction: column;
-  position: relative;
   row-gap: 18px;
 }
 .restaurants .card {
   display: flex;
   flex-direction: column;
+  position: relative;
   margin: 0 17px 0 18px;
   height: 100%;
   box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -239,15 +250,21 @@ main {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   z-index: 40;
+  background-color: var(--nouveau);
+  color: var(--nouveau-font);
+  width: 89px;
+  height: 29px;
+  border-radius: 2px;
 }
 
-button:hover {
-  opacity: 0.5;
+.card-icons {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1rem;
 }
-
 .card-icons i {
   font-size: 25px;
 }
@@ -274,6 +291,41 @@ i:hover {
 i:hover {
   transform: scale(1.1);
   opacity: 0.5;
+}
+
+@media only screen and (min-width: 1024px) {
+  header .logo {
+    margin: 30px 0px 31.798px 0px;
+  }
+  .info {
+    padding: 30px 0;
+  }
+  .info h1 {
+    padding: 0 0 18px 0;
+  }
+  .fonctionnement {
+    padding: 50px 12.5%;
+  }
+  .fonctionnement .f-container {
+    flex-direction: row;
+  }
+  .fonctionnement .f-container .f-box {
+    white-space: nowrap;
+    margin: 0;
+  }
+  .restaurants {
+    margin-bottom: 30px;
+    padding: 0 12.5%;
+  }
+  .restaurants .card-contener {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 100px;
+  }
+  .restaurants .card {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

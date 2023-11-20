@@ -64,7 +64,7 @@ main {
   width: 100%;
   text-align: center;
   background-color: var(--background-color);
-  padding: 50px 0;
+  padding: 39px 0;
 
   h1 {
     font-size: 1.5rem;
@@ -80,15 +80,13 @@ main {
     border: none;
     border-radius: 25px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s;
+    transition: all 0.3s;
+    color: var(--white);
+    padding: 13px 18.75px;
 
     &:hover {
       transform: scale(1.15);
-    }
-
-    h3 {
-      color: var(--white);
-      margin: 13px 18.75px;
+      opacity: 0.5;
     }
   }
 }
@@ -99,44 +97,50 @@ main {
   margin-top: 48px;
   margin-bottom: 68px;
   gap: 24.92px;
-  align-items: flex-start;
-  h2 {
-    padding-left: 20px;
-  }
+  align-items: stretch;
+  .f-container {
+    @include dflexgeneral;
+    flex-direction: column;
+    gap: 24.94px;
 
-  .f-box {
-    @include dflexgeneral();
-    justify-content: normal;
-    gap: 10px;
-    background-color: var(--background-color);
-    width: -webkit-fill-available;
-    margin: 0 20px 0 32.51px;
-    height: 72.379px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    transition: transform 0.5s;
-
-    &:hover {
-      transform: scale(1.01);
-      background: #bfabd8b7;
+    h2 {
+      padding-left: 20px;
     }
-  }
 
-  h3 {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
+    .f-box {
+      @include dflexgeneral();
+      justify-content: normal;
+      gap: 10px;
+      background-color: var(--background-color);
+      width: -webkit-fill-available;
+      margin: 0 20px 0 32.51px;
+      height: 72.379px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      transition: transform 0.5s;
 
-  h4 {
-    position: relative;
-    right: 10px;
-    color: var(--grey-2);
-    font-size: small;
-    background-color: #9356dc;
-    padding: 0 4.5px;
-    border-radius: 100%;
+      &:hover {
+        transform: scale(1.01);
+        background: #bfabd8b7;
+      }
+    }
+
+    h3 {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    h4 {
+      position: relative;
+      right: 10px;
+      color: var(--grey-2);
+      font-size: small;
+      background-color: #9356dc;
+      padding: 0 4.5px;
+      border-radius: 100%;
+    }
   }
 }
 
@@ -148,11 +152,12 @@ main {
   }
   .card-contener {
     @include dfcolomun();
-    position: relative;
+
     row-gap: 18px;
   }
   .card {
     @include dfcolomun();
+    position: relative;
     margin: 0 17px 0 18px;
     height: 100%;
     box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -187,15 +192,19 @@ main {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   z-index: 40;
+  background-color: var(--nouveau);
+  color: var(--nouveau-font);
+  width: 89px;
+  height: 29px;
+  border-radius: 2px;
 }
-button:hover {
-  opacity: 0.5;
-}
-
 .card-icons {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1rem;
   & i {
     font-size: 25px;
   }
@@ -223,5 +232,44 @@ i:hover {
   & {
     transform: scale(1.1);
     opacity: 0.5;
+  }
+}
+
+//desktop
+@media only screen and (min-width: 1024px) {
+  header .logo {
+    margin: 30px 0px 31.798px 0px;
+  }
+
+  .info {
+    padding: 30px 0;
+    h1 {
+      padding: 0 0 18px 0;
+    }
+  }
+
+  .fonctionnement {
+    padding: 50px 12.5%;
+    .f-container {
+      flex-direction: row;
+      .f-box {
+        white-space: nowrap;
+        margin: 0;
+      }
+    }
+  }
+
+  .restaurants {
+    margin-bottom: 30px;
+    padding: 0 12.5%;
+    .card-contener {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 50px;
+      column-gap: 100px;
+    }
+    .card {
+      margin: 0;
+    }
   }
 }
