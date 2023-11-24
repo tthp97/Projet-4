@@ -16,7 +16,7 @@
     }
   }
 
-  .fa-solid.liked {
+  .liked {
     display: none;
     background: var(--button-background);
     background-clip: text;
@@ -24,7 +24,7 @@
     -webkit-text-fill-color: transparent;
   }
 }
-i:hover {
+.card-icons :hover {
   transition: all 0.5s;
   & {
     transform: scale(1.1);

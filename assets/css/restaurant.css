@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   display: flex;
   justify-content: center;
@@ -90,7 +91,7 @@ footer h2 {
 .card-icons input[type=checkbox]:checked ~ .liked {
   display: inline-block;
 }
-.card-icons .fa-solid.liked {
+.card-icons .liked {
   display: none;
   background: var(--button-background);
   background-clip: text;
@@ -98,14 +99,38 @@ footer h2 {
   -webkit-text-fill-color: transparent;
 }
 
-i:hover {
+.card-icons :hover {
   transition: all 0.5s;
 }
-i:hover {
+.card-icons :hover {
   transform: scale(1.1);
   opacity: 0.5;
 }
 
+.cta {
+  background: var(--button-background);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
+  color: var(--white);
+  padding: 13px 18.75px;
+}
+.cta:hover {
+  transform: scale(1.15);
+  opacity: 0.5;
+}
+
+@keyframes itemsAppear {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 :root {
   --background-color: #f6f6f6;
   --button-background: linear-gradient(to top, #9356dc, #ff79da);
@@ -121,6 +146,7 @@ i:hover {
   margin: 0;
   text-decoration: none;
   color: black;
+  text-overflow: clip;
 }
 
 body {
@@ -138,12 +164,6 @@ header a {
 main {
   display: flex;
   flex-direction: column;
-}
-main h1 {
-  padding-top: 40px;
-  padding-left: 17px;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
 }
 main .title {
   display: flex;
@@ -187,6 +207,24 @@ main .title .underline {
   margin-top: 220px;
   z-index: 1;
 }
+.lpdg-container .entrées {
+  animation: itemsAppear 1s both;
+  animation-delay: 1s;
+}
+.lpdg-container .plats {
+  animation: itemsAppear 2s both;
+  animation-delay: 2s;
+}
+.lpdg-container .desserts {
+  animation: itemsAppear 3s both;
+  animation-delay: 3s;
+}
+.lpdg-container .en-tete h1 {
+  padding-top: 40px;
+  padding-left: 17px;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+}
 .lpdg-container .en-tete .card-icons {
   bottom: 0;
   top: 3rem;
@@ -194,14 +232,13 @@ main .title .underline {
   height: 25px;
 }
 .lpdg-container .little-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-color: var(--white);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin: 10px;
   padding: 15px;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .lc-content {
@@ -210,21 +247,70 @@ main .title .underline {
   align-items: flex-end;
 }
 .lc-content .lc-txt {
-  display: flex;
-  flex-direction: column;
   gap: 5px;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  direction: ltr;
 }
-.lc-content .lc-txt h3 {
+.lc-content h3 {
   font-size: 18px;
 }
-.lc-content .lc-txt p {
+.lc-content p {
   font-size: 15px;
 }
 .lc-content span {
   font-weight: 700;
+  transition: margin-right 1s;
+}
+
+.cta {
+  padding: 15px 48px 16px 49px;
+  margin: auto auto 40px auto;
+}
+
+.little-card:hover span {
+  margin-right: 25%;
+}
+.little-card:hover .check {
+  margin-right: 25%;
+  opacity: 1;
+}
+
+@keyframes slide {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+.check {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 25%;
+  border-radius: 0 15px 15px 0;
+  background-color: var(--nouveau);
+  z-index: 1;
+  top: 0;
+  right: -25%;
+  transition: all 1s;
+}
+.check i {
+  color: var(--background-color);
+}
+
+@keyframes notSlide {
+  0% {
+    margin-right: 25%;
+  }
+  100% {
+    margin-right: 0;
+  }
 }
 
 /*# sourceMappingURL=restaurant.css.map */
