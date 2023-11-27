@@ -140,17 +140,17 @@ main {
 
   .entrées {
     animation: itemsAppear 1s both;
-    animation-delay: 1s;
+    animation-delay: 3s;
   }
 
   .plats {
     animation: itemsAppear 2s both;
-    animation-delay: 2s;
+    animation-delay: 4s;
   }
 
   .desserts {
     animation: itemsAppear 3s both;
-    animation-delay: 3s;
+    animation-delay: 5s;
   }
 
   .en-tete {
