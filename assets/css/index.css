@@ -120,13 +120,6 @@ footer h2 {
   opacity: 0.5;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  text-decoration: none;
-  color: black;
-}
-
 .loader {
   position: absolute;
   text-align: center;
@@ -148,6 +141,8 @@ footer h2 {
   font-family: "Shrikhand", sans-serif;
   color: #f6f6f6;
   font-size: 2rem;
+  animation: appear 3s linear both;
+  -webkit-animation: appear 3s linear both;
 }
 
 .circle {
@@ -172,6 +167,54 @@ footer h2 {
   z-index: 10003;
   --webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    left: -10px;
+  }
+  50% {
+    left: 165px;
+  }
+  100% {
+    left: -10px;
+  }
+}
+@keyframes spin-reverse {
+  0% {
+    left: 165px;
+  }
+  100% {
+    left: -10px;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes OverFloww {
+  from {
+    overflow: hidden;
+    -webkit-overflow-scrolling: hidden;
+  }
+  to {
+    overflow: scroll;
+    -webkit-overflow-scrolling: scroll;
+  }
+}
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  text-decoration: none;
+  color: black;
 }
 
 :root {
@@ -383,25 +426,6 @@ main {
     margin: 0;
   }
 }
-@keyframes spin {
-  0% {
-    left: -10px;
-  }
-  50% {
-    left: 165px;
-  }
-  100% {
-    left: -10px;
-  }
-}
-@keyframes spin-reverse {
-  0% {
-    left: 165px;
-  }
-  100% {
-    left: -10px;
-  }
-}
 @keyframes appear {
   0% {
     opacity: 1;
@@ -411,14 +435,6 @@ main {
   }
   100% {
     opacity: 0;
-  }
-}
-@keyframes OverFloww {
-  from {
-    overflow-y: hidden;
-  }
-  to {
-    overflow-y: scroll;
   }
 }
 

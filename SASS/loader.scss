@@ -6,7 +6,8 @@
   height: 100%;
   z-index: 10000;
   background-color: #353535;
-
+  animation: appear 3s linear both;
+  -webkit-animation: appear 3s linear both;
   em {
     position: absolute;
     left: 50%;
