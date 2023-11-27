@@ -2,6 +2,7 @@
 @import "footer.scss";
 @import "coeur.scss";
 @import "cta.scss";
+@import "loader.scss";
 
 @keyframes itemsAppear {
   from {
@@ -265,47 +266,5 @@ main {
         right: 5rem;
       }
     }
-  }
-}
-@keyframes spin {
-  0% {
-    left: -10px;
-  }
-  50% {
-    left: 165px;
-  }
-  100% {
-    left: -10px;
-  }
-}
-
-@keyframes spin-reverse {
-  0% {
-    left: 165px;
-  }
-  100% {
-    left: -10px;
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
-
-@keyframes OverFloww {
-  from {
-    overflow-y: hidden;
-  }
-  to {
-    overflow-y: scroll;
   }
 }
