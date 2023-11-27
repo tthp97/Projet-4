@@ -258,15 +258,15 @@ main .title .underline {
 }
 .lpdg-container .entrées {
   animation: itemsAppear 1s both;
-  animation-delay: 1s;
+  animation-delay: 3s;
 }
 .lpdg-container .plats {
   animation: itemsAppear 2s both;
-  animation-delay: 2s;
+  animation-delay: 4s;
 }
 .lpdg-container .desserts {
   animation: itemsAppear 3s both;
-  animation-delay: 3s;
+  animation-delay: 5s;
 }
 .lpdg-container .en-tete h1 {
   padding-top: 40px;
