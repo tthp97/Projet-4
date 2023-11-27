@@ -231,7 +231,8 @@ main .title .underline {
   right: 1.438rem;
   height: 25px;
 }
-.lpdg-container .little-card {
+
+.little-card {
   background-color: var(--white);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -304,12 +305,21 @@ main .title .underline {
   color: var(--background-color);
 }
 
-@keyframes notSlide {
-  0% {
-    margin-right: 25%;
+@media (min-width: 1024px) {
+  .lpdg-container {
+    width: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-right: 15%;
+    padding-left: 15%;
   }
-  100% {
-    margin-right: 0;
+  .lpdg-container .en-tete {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  .lpdg-container .en-tete .card-icons {
+    right: 5rem;
   }
 }
 
