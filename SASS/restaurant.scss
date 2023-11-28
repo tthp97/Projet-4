@@ -4,17 +4,12 @@
 @import "cta.scss";
 @import "loader.scss";
 
-@keyframes itemsAppear {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+@mixin ThreePoint {
+  max-width: 1000px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-
 :root {
   --background-color: #f6f6f6;
   --button-background: linear-gradient(to top, #9356dc, #ff79da);
@@ -109,17 +104,16 @@ main {
   }
 
   .en-tete {
+    display: flex;
+    justify-content: space-around;
+
+    align-items: baseline;
     h1 {
       padding-top: 40px;
       padding-left: 17px;
       font-family: "Shrikhand", sans-serif;
       font-size: 28px;
-    }
-    .card-icons {
-      bottom: 0;
-      top: 3rem;
-      right: 1.438rem;
-      height: 25px;
+      @include ThreePoint();
     }
   }
 }
@@ -140,17 +134,16 @@ main {
 
   .lc-txt {
     gap: 5px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    direction: ltr;
+    @include ThreePoint();
   }
 
   h3 {
     font-size: 18px;
+    @include ThreePoint();
   }
   p {
     font-size: 15px;
+    @include ThreePoint();
   }
 
   span {
@@ -158,33 +151,6 @@ main {
     transition: margin-right 1s;
   }
 }
-
-.cta {
-  padding: 15px 48px 16px 49px;
-  margin: auto auto 40px auto;
-}
-
-.little-card:hover {
-  span {
-    margin-right: 25%;
-  }
-
-  & .check {
-    margin-right: 25%;
-    opacity: 1;
-  }
-}
-
-@keyframes slide {
-  0% {
-    display: none;
-  }
-
-  100% {
-    display: block;
-  }
-}
-
 .check {
   position: absolute;
   display: flex;
@@ -205,6 +171,22 @@ main {
   }
 }
 
+.cta {
+  padding: 15px 48px 16px 49px;
+  margin: auto auto 40px auto;
+}
+
+.little-card:hover {
+  span {
+    margin-right: 25%;
+  }
+
+  & .check {
+    margin-right: 25%;
+    opacity: 1;
+  }
+}
+
 @media (min-width: 1024px) {
   .lpdg-container {
     width: auto;
@@ -222,6 +204,27 @@ main {
         margin-left: 10%;
       }
     }
+  }
+}
+
+@keyframes slide {
+  0% {
+    display: none;
+  }
+
+  100% {
+    display: block;
+  }
+}
+
+@keyframes itemsAppear {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
