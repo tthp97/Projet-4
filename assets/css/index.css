@@ -191,6 +191,20 @@ footer h2 {
 @keyframes appear {
   0% {
     opacity: 1;
+    display: block;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 1;
+    display: block;
   }
   50% {
     opacity: 1;
@@ -426,15 +440,28 @@ main {
     margin: 0;
   }
 }
-@keyframes appear {
-  0% {
-    opacity: 1;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fonctionnement {
+    align-items: center;
   }
-  50% {
-    opacity: 1;
+  .fonctionnement .f-container {
+    width: 50%;
   }
-  100% {
-    opacity: 0;
+  .restaurants {
+    padding: 0 12.5%;
+  }
+  .restaurants .card-contener {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 100px;
+    padding-bottom: 30px;
+  }
+  .restaurants .card {
+    margin: 0;
+  }
+  .restaurants .card img {
+    height: 100px;
   }
 }
 

@@ -227,14 +227,27 @@ main {
   }
 }
 
-@keyframes appear {
-  0% {
-    opacity: 1;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fonctionnement {
+    align-items: center;
+    .f-container {
+      width: 50%;
+    }
   }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+  .restaurants {
+    padding: 0 12.5%;
+    .card-contener {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 50px;
+      column-gap: 100px;
+      padding-bottom: 30px;
+    }
+    .card {
+      margin: 0;
+      img {
+        height: 100px;
+      }
+    }
   }
 }

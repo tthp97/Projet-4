@@ -216,9 +216,39 @@ main {
       display: flex;
       position: relative;
       justify-content: center;
+      align-items: baseline;
       .card-icons {
-        right: 5rem;
+        position: static;
+        margin-left: 10%;
       }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .lpdg-container {
+    width: auto;
+    margin: 0 10%;
+    margin-top: 220px;
+    padding: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    .en-tete {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: baseline;
+      .card-icons {
+        position: static;
+        margin-left: 10%;
+      }
+    }
+  }
+
+  footer {
+    align-items: center;
+    .footer {
+      align-items: center;
     }
   }
 }
