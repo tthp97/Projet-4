@@ -79,6 +79,13 @@ footer h2 {
   bottom: 1.5rem;
   right: 1rem;
 }
+.card-icons .liked {
+  display: none;
+  background: var(--button-background);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .card-icons i {
   font-size: 25px;
 }
@@ -91,18 +98,8 @@ footer h2 {
 .card-icons input[type=checkbox]:checked ~ .liked {
   display: inline-block;
 }
-.card-icons .liked {
-  display: none;
-  background: var(--button-background);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-.card-icons :hover {
-  transition: all 0.5s;
-}
-.card-icons :hover {
+.card-icons:hover {
   transform: scale(1.1);
   opacity: 0.5;
 }
@@ -303,21 +300,6 @@ main .title .underline {
   margin-top: 220px;
   z-index: 1;
 }
-.lpdg-container .en-tete .card-icons {
-  position: static;
-}
-.lpdg-container .entrées {
-  animation: itemsAppear 1s both;
-  animation-delay: 3s;
-}
-.lpdg-container .plats {
-  animation: itemsAppear 2s both;
-  animation-delay: 4s;
-}
-.lpdg-container .desserts {
-  animation: itemsAppear 3s both;
-  animation-delay: 5s;
-}
 .lpdg-container .en-tete {
   display: flex;
   justify-content: space-around;
@@ -332,6 +314,22 @@ main .title .underline {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.lpdg-container .en-tete .card-icons {
+  position: static;
+  margin-right: 9%;
+}
+.lpdg-container .entrées {
+  animation: itemsAppear 1s both;
+  animation-delay: 3s;
+}
+.lpdg-container .plats {
+  animation: itemsAppear 2s both;
+  animation-delay: 4s;
+}
+.lpdg-container .desserts {
+  animation: itemsAppear 3s both;
+  animation-delay: 5s;
 }
 
 .little-card {

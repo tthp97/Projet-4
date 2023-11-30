@@ -87,12 +87,23 @@ main {
   gap: 40px;
   margin-top: 220px;
   z-index: 1;
+
   .en-tete {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    h1 {
+      padding-top: 40px;
+      padding-left: 17px;
+      font-family: "Shrikhand", sans-serif;
+      font-size: 28px;
+      @include ThreePoint();
+    }
     .card-icons {
       position: static;
+      margin-right: 9%;
     }
   }
-
   .entrées {
     animation: itemsAppear 1s both;
     animation-delay: 3s;
@@ -106,20 +117,6 @@ main {
   .desserts {
     animation: itemsAppear 3s both;
     animation-delay: 5s;
-  }
-
-  .en-tete {
-    display: flex;
-    justify-content: space-around;
-
-    align-items: baseline;
-    h1 {
-      padding-top: 40px;
-      padding-left: 17px;
-      font-family: "Shrikhand", sans-serif;
-      font-size: 28px;
-      @include ThreePoint();
-    }
   }
 }
 .little-card {

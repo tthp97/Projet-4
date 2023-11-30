@@ -2,6 +2,14 @@
   position: absolute;
   bottom: 1.5rem;
   right: 1rem;
+
+  .liked {
+    display: none;
+    background: var(--button-background);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   & i {
     font-size: 25px;
   }
@@ -15,19 +23,8 @@
       display: inline-block;
     }
   }
-
-  .liked {
-    display: none;
-    background: var(--button-background);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 }
-.card-icons :hover {
-  transition: all 0.5s;
-  & {
-    transform: scale(1.1);
-    opacity: 0.5;
-  }
+.card-icons:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
 }
