@@ -87,6 +87,11 @@ main {
   gap: 40px;
   margin-top: 220px;
   z-index: 1;
+  .en-tete {
+    .card-icons {
+      position: static;
+    }
+  }
 
   .entrées {
     animation: itemsAppear 1s both;

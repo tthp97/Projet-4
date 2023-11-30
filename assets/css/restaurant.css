@@ -303,6 +303,9 @@ main .title .underline {
   margin-top: 220px;
   z-index: 1;
 }
+.lpdg-container .en-tete .card-icons {
+  position: static;
+}
 .lpdg-container .entrées {
   animation: itemsAppear 1s both;
   animation-delay: 3s;
